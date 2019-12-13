@@ -531,11 +531,7 @@ if ( ! function_exists( 'user_registration_form_data' ) ) {
 
 							case 'date':
 								$date_format       = isset( $field->advance_setting->date_format ) ? $field->advance_setting->date_format : '';
-								$date_localization = isset( $field->advance_setting->date_localization ) ? $field->advance_setting->date_localization : '';
 								$extra_params['custom_attributes']['data-date-format']  = $date_format;
-								wp_register_script( 'flatpickr-localization', 'https://npmcdn.com/flatpickr/dist/l10n/' . $date_localization . '.js' );
-								wp_enqueue_script( 'flatpickr-localization', 'https://npmcdn.com/flatpickr/dist/l10n/' . $date_localization . '.js' );
-								$extra_params['custom_attributes']['data-locale']       = $date_localization;
 								break;
 
 							case 'country':

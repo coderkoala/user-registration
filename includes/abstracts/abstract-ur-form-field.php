@@ -168,12 +168,6 @@ abstract class UR_Form_Field {
 			$form_data['custom_attributes']['data-default-date'] = $data['advance_setting']->set_current_date;
 		}
 
-		if ( isset( $data['advance_setting']->date_localization ) && 'en' !== $data['advance_setting']->date_localization ) {
-			wp_register_script( 'flatpickr-localization', 'https://npmcdn.com/flatpickr/dist/l10n/' . $data['advance_setting']->date_localization . '.js' );
-			wp_enqueue_script( 'flatpickr-localization', 'https://npmcdn.com/flatpickr/dist/l10n/' . $data['advance_setting']->date_localization . '.js' );
-			$form_data['custom_attributes']['data-locale'] = $data['advance_setting']->date_localization;
-		}
-
 		$form_data['custom_attributes']['data-label'] = ur_string_translation( $form_id, 'user_registration_' . $data['general_setting']->field_name . '_label', $data['general_setting']->label );
 
 		if ( isset( $form_data['label'] ) ) {

@@ -547,11 +547,6 @@ if ( ! class_exists( 'UR_Admin_Profile', false ) ) :
 									$fields[ $field_index ]['type'] = 'date';
 									$date_format                    = isset( $field->advance_setting->date_format ) ? $field->advance_setting->date_format : '';
 									$fields[ $field_index ]['attributes']['data-date-format'] = $date_format;
-
-									if( ! empty( $field->advance_setting->date_localization ) ) {
-										$date_localization                    = isset( $field->advance_setting->date_localization ) ? $field->advance_setting->date_localization : 'en';
-										$fields[ $field_index ]['attributes']['data-locale'] = $date_localization;
-									}
 									break;
 
 								case 'privacy_policy':
