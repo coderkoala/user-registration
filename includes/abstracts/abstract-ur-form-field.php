@@ -164,20 +164,8 @@ abstract class UR_Form_Field {
 			$form_data['custom_attributes']['data-date-format'] = $data['advance_setting']->date_format;
 		}
 
-		if ( isset( $data['advance_setting']->min_date ) ) {
-			$form_data['custom_attributes']['data-min-date'] = '' !== $data['advance_setting']->min_date ? date( $data['advance_setting']->date_format, strtotime( $data['advance_setting']->min_date ) ) : '';
-		}
-
-		if ( isset( $data['advance_setting']->max_date ) ) {
-			$form_data['custom_attributes']['data-max-date'] = '' !== $data['advance_setting']->max_date ? date( $data['advance_setting']->date_format, strtotime( $data['advance_setting']->max_date ) ) : '';
-		}
-
 		if ( isset( $data['advance_setting']->set_current_date ) ) {
 			$form_data['custom_attributes']['data-default-date'] = $data['advance_setting']->set_current_date;
-		}
-
-		if ( isset( $data['advance_setting']->enable_date_range ) ) {
-			$form_data['custom_attributes']['data-mode'] = $data['advance_setting']->enable_date_range;
 		}
 
 		if ( isset( $data['advance_setting']->date_localization ) && 'en' !== $data['advance_setting']->date_localization ) {

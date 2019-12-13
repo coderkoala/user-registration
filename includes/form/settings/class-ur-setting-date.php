@@ -64,40 +64,6 @@ class UR_Setting_Date extends UR_Field_Settings {
 				),
 			),
 
-			'enable_min_max'    => array(
-				'type'        => 'select',
-				'data-id'     => $this->field_id . '_enable_min_max',
-				'label'       => __( 'Enable Min-Max Date', 'user-registration' ),
-				'name'        => $this->field_id . '[enable_min_max]',
-				'class'       => $this->default_class . ' ur-settings-enable-min-max',
-				'default'     => 'false',
-				'required'    => false,
-				'options'     => array(
-					'true'  => 'Yes',
-					'false' => 'No',
-				),
-			),
-
-			'min_date'       => array(
-				'label'    => __( 'Min Date', 'user-registration' ),
-				'data-id'  => $this->field_id . '_min_date',
-				'name'     => $this->field_id . '[min_date]',
-				'class'    => $this->default_class . ' ur-settings-min-date',
-				'type'     => 'text',
-				'required' => false,
-				'default'  => '',
-			),
-
-			'max_date'       => array(
-				'label'    => __( 'Max Date', 'user-registration' ),
-				'data-id'  => $this->field_id . '_max_date',
-				'name'     => $this->field_id . '[max_date]',
-				'class'    => $this->default_class . ' ur-settings-max-date',
-				'type'     => 'text',
-				'required' => false,
-				'default'  => '',
-			),
-
 			'set_current_date'    => array(
 				'type'        => 'select',
 				'data-id'     => $this->field_id . '_set_current_date',
@@ -109,20 +75,6 @@ class UR_Setting_Date extends UR_Field_Settings {
 				'options'     => array(
 					'today' => 'Yes',
 					''      => 'No',
-				),
-			),
-
-			'enable_date_range'    => array(
-				'type'        => 'select',
-				'data-id'     => $this->field_id . '_enable_date_range',
-				'label'       => __( 'Enable Date Range', 'user-registration' ),
-				'name'        => $this->field_id . '[enable_date_range]',
-				'class'       => $this->default_class . ' ur-settings-enable-date-range',
-				'default'     => '',
-				'required'    => false,
-				'options'     => array(
-					'range'  => 'Yes',
-					''       => 'No',
 				),
 			),
 
