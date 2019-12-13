@@ -66,22 +66,6 @@ class UR_Form_Field_Date extends UR_Form_Field {
 			);
 		}
 	}
-
-	/**
-	 * Checks for valid date
-	 *
-	 * @param string $date_string
-	 */
-	private function is_valid_date( $date_string ) {
-
-		$date = date_parse( $date_string );
-
-		if ( $date['error_count'] == 0 && checkdate( $date['month'], $date['day'], $date['year'] ) ) {
-			return true;
-		}
-
-		return false;
-	}
 }
 
 return UR_Form_Field_Date::get_instance();
